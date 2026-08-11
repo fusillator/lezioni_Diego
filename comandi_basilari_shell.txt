@@ -1,0 +1,24 @@
+pwd 
+mkdir lezioni
+cd lezioni
+ls 
+touch filevuoto
+ls -l
+cp filevuoto nuovofile
+rm filevuoto
+
+vim nuovofile
+i per entrare in modalità interattiva e scrivere
+esc 
+:w
+:w nomefile
+:q uscire 
+:q! per uscire senza salvare
+
+cat nuovofile
+rm -rf lezioni
+
+man ls
+man rm
+man cat 
+man touch

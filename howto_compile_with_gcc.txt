@@ -1,0 +1,2 @@
+gcc -W -Wall hello_world.c 
+gcc -W -Wall -o hello.o hello_world.c 
