@@ -58,14 +58,7 @@ e1:
   printf("linea eseguita");
 
 
-  c=0;
-e2:  
-  if (c<=3){
-    printf("%d\n",c);
-    c++;
-    goto e2;
-  } 
-   
+  
 
 
 
