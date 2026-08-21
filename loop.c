@@ -19,6 +19,8 @@ int main(void){
 //    c++;
 //    goto e2;
 //  } 
+  printf("spazzatura da non visualizzare\n");  
+  printf("\x1b[H\x1b[2J\x1b[3J"); // stampo la sequenza che usa clear per pulire il terminale (clear | hexdump -C:  1b 5b 48 1b 5b 32 4a 1b  5b 33 4a |.[H.[2J.[3J|)
 
   int d=0;  
   while (d<10){
@@ -28,13 +30,36 @@ int main(void){
     if (d==5) break;
     d++;
   }
-  //printf("%c\n", b); 
-  
-  for (int e=0; e<10; e++){
-    printf("%d\n", e); 
-    if (e==5) break;
+  //printf("%c\n", b);
+  printf("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
+  unsigned char g=0;
+  while(1){
+    printf("%d\n",++g);
+    if (g==9) break;
   }
-  printf("%d\n", e); 
+
+
+  printf("*******************************************************\n");  
+  for (int e=0; e<10; e++){
+    if (e%2==1){ 
+      if (e==5) 
+        break;
+      continue;
+    }
+    printf("%d\n", e); 
+  }
+  //printf("%d\n", e); //va in errore perchè fuori scope e deve essere dichiarata all'interno di main per esistere
+  printf("*******************************************************\n");  
+
+  for(unsigned char i=0;;){
+    printf("%d\n",i);
+    if (i==10) break; 
+    i++;
+  }
+  printf("non dentro il ciclo\n");
+
+  for(int h=9; h>0; h=h-2) printf("%d\n", h);
+  printf("fine dispari da 9 a 0\n");
   
   int f=0;
   do {
